@@ -15,7 +15,14 @@ export default {
 </script>
 
 <template>
-  <main class="p-5">
+  <main>
+    <div class="container">
+      <div class="dropdown py-3 text-start">
+        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Alien
+        </button>
+      </div>
+    </div>
     <div class="container bg-white p-5">
       <header class="p-3">
         <h4>
