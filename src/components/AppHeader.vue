@@ -2,7 +2,7 @@
 export default {
   data() {
     return { 
-      message: 'Template Vite + Vue'
+      message: 'Yu-Gi-Oh Api'
     }
   }
 }
@@ -10,9 +10,11 @@ export default {
 
 <template>
   <header>
-    <h1>
-      {{ message }}
-    </h1>
+    <div class="container py-2">
+      <h1>
+        {{ message }}
+      </h1>
+    </div>
   </header>
 </template>
 
