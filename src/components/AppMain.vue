@@ -10,6 +10,12 @@ export default {
   },
   components: {
     SingleCard
+  },
+  methods: {
+    performSearch() {
+
+      this.$emit('performSearch');
+    }
   }
 }
 </script>
@@ -17,10 +23,20 @@ export default {
 <template>
   <main>
     <div class="container">
-      <div class="dropdown py-3 text-start">
-        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Alien
-        </button>
+      <div class="py-3 w-50">
+        <select 
+          v-model="store.searchArchetype" 
+          class="form-control w-25"
+          @change="performSearch">
+
+          <option value="">Select Archetype</option>
+          <option 
+            v-for="(archetype, index) in store.archetypes" 
+            :key="index"
+            :value="archetype.archetype_name">
+            {{ archetype.archetype_name }}
+            </option>
+        </select>
       </div>
     </div>
     <div class="container bg-white p-5">
